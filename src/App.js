@@ -1,35 +1,28 @@
 import './App.css';
 import React from 'react';
-import {Routes, Route} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
-import Mentions from "./pages/Contact";
+import Mentions from "./pages/Mentions";
 import Portfolio from "./pages/Portfolio";
 import Services from "./pages/Services";
 
 export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-          <nav>
-            <link href="/">Accueil</link>
-            <link href="/Portfolio">Portfolio</link>
-            <link href="/Services">Services</link>
-            <link href="/Contact">Contact</link>
-            <link href="/Mentions">Mentions Légales</link>
-            <Routes>
-              <Route path="/" element={<Accueil />} />
-              <Route path="/Services" element={<Services />} />
-              <Route path="/Portfolio" element={<Portfolio />} />
-              <Route path="/Contact" element={<Contact />} />
-              <Route path="/Mentions" element={<Mentions />} />
-        </Routes>
-          </nav>
-      </header>
+      <Header />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/mentions" element={<Mentions />} />
+      </Routes>
+
+      <Footer />
     </div>
   );
 }
-
-export default App;
