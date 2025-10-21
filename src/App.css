@@ -11,5 +11,5 @@
 
 .nav-link.active-link {
   font-weight: bold;
-  color: #ffcc00; /* couleur du lien actif */
+  text-decoration: underline;
 }

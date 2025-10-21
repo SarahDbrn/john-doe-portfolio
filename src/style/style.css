@@ -1,0 +1,53 @@
+:root{
+  --accent: #0d6efd; /* bootstrap primary */
+  --card-hover-bg: #efefef;
+}
+
+/* Font */
+body {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+/* Header links uppercase */
+.navbar .nav-link {
+  text-transform: uppercase;
+  padding: .625rem .75rem;
+  transition: all .25s ease;
+}
+.navbar .nav-link:hover { text-decoration: underline; }
+.navbar .active-link { font-weight:600; text-decoration:underline; }
+
+/* Hero */
+.hero { color:#fff; position:relative; }
+.hero::after { content:""; position:absolute; inset:0; background:rgba(0,0,0,0.25); }
+
+/* Card hover effects */
+.card {
+  transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  background-color: var(--card-hover-bg);
+}
+
+/* Buttons */
+.btn-primary { transition: filter .18s ease, background-color .18s ease; }
+.btn-primary:hover { filter: brightness(.92); }
+
+/* Footer icons become white on hover */
+.footer-icon { font-size:1.4rem; opacity:0.8; transition: color .2s ease, opacity .2s ease; color: #bdbdbd; }
+.footer-icon:hover { color:#fff; opacity:1; }
+
+/* Footer links bold on hover */
+footer a { color: #d7d7d7; text-decoration:none; transition: font-weight .15s ease; }
+footer a:hover { font-weight:600; text-decoration: none; }
+
+/* Small responsive adjustments */
+.map-responsive iframe { width:100%; border:0; }
+
+/* Progress bar font weight for bars labels */
+.progress-bar { font-weight:600; }
+
+/* transition for accordion header to show caret rotate (Bootstrap handles caret by default, but we can style) */
+.accordion-button { transition: background-color .15s ease; }
