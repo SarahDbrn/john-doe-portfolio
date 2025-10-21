@@ -1,41 +1,53 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-export default function Footer(){
+export default function Footer() {
   return (
-    <footer className="bg-dark text-light mt-5 pt-5 pb-4">
+    <footer className="bg-dark text-light pt-5 pb-4 mt-5">
       <div className="container">
         <div className="row">
-          <div className="col-md-4 mb-3">
-            <h5>John Doe</h5>
-            <p className="small">40 rue Laure Diebold<br/>69009 Lyon, France<br/>10 20 30 40 50<br/>john.doe@gmail.com</p>
-            <div className="socials">
-              <a href="https://github.com/username" target="_blank" rel="noopener noreferrer nofollow" className="me-2"><i className="bi bi-github footer-icon"></i></a>
-              <a href="https://twitter.com/username" target="_blank" rel="noopener noreferrer nofollow" className="me-2"><i className="bi bi-twitter footer-icon"></i></a>
-              <a href="https://www.linkedin.com/in/username" target="_blank" rel="noopener noreferrer nofollow"><i className="bi bi-linkedin footer-icon"></i></a>
+          {/* COLONNE 1 - Coordonnées */}
+          <div className="col-md-4 mb-4">
+            <h6 className="fw-bold">John Doe</h6>
+            <p className="mb-1">40 rue Laure Diebold</p>
+            <p className="mb-1">69009 Lyon, France</p>
+            <p className="mb-1">10 20 30 40 50</p>
+            <p className="mb-3">john.doe@gmail.com</p>
+            <div className="social-icons">
+                <a href="#" className="me-3"><i className="bi bi-twitter"></i></a>
+                <a href="#" className="me-3"><i className="bi bi-github"></i></a>
+                <a href="#"><i className="bi bi-linkedin"></i></a>
             </div>
           </div>
-
-          <div className="col-md-4 mb-3">
-            <h5>Liens utiles</h5>
-            <ul className="list-unstyled small">
-              <li><Link to="/">Accueil</Link></li>
-              <li><Link to="/services">Services</Link></li>
-              <li><Link to="/portfolio">Portfolio</Link></li>
-              <li><Link to="/contact">Me contacter</Link></li>
-              <li><Link to="/mentions">Mentions légales</Link></li>
+        
+          {/* COLONNE 2 - Liens utiles */}
+          <div className="col-md-4 mb-4">
+            <h6 className="fw-bold mb-3">Liens utiles</h6>
+            <ul className="list-unstyled">
+              <li><a href="/" className="footer-link">Accueil</a></li>
+              <li><a href="/services" className="footer-link">Services</a></li>
+              <li><a href="/portfolio" className="footer-link">Portfolio</a></li>
+              <li><a href="/contact" className="footer-link">Me contacter</a></li>
+              <li><a href="/mentions-legales" className="footer-link">Mentions légales</a></li>
             </ul>
           </div>
 
-          <div className="col-md-4 mb-3">
-            <h5>Mes dernières réalisations</h5>
-            <ul className="list-unstyled small">
-              <li><Link to="/portfolio">Fresh Food</Link></li>
-              <li><Link to="/portfolio">Restaurant Akira</Link></li>
-              <li><Link to="/portfolio">Espace bien-être</Link></li>
-              <li><Link to="/portfolio">SEO</Link></li>
+          {/* COLONNE 3 - Réalisations */}
+          <div className="col-md-4 mb-4">
+            <h6 className="fw-bold mb-3">Mes dernières réalisations</h6>
+            <ul className="list-unstyled">
+              <li>Fresh Food</li>
+              <li>Restaurant Akira</li>
+              <li>Espace bien-être</li>
+              <li>SEO</li>
+              <li>Création d'une API</li>
+              <li>Maquette d'un site</li>
             </ul>
           </div>
+        </div>
+
+        {/* Ligne de bas de page */}
+        <div className="text-center border-top border-secondary pt-3 mt-3 small text-muted">
+          © {new Date().getFullYear()} John Doe — Tous droits réservés
         </div>
       </div>
     </footer>

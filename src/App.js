@@ -1,4 +1,4 @@
-import './App.css';
+import './style/style.css';
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/header";
@@ -8,6 +8,9 @@ import Contact from "./pages/Contact";
 import Mentions from "./pages/Mentions";
 import Portfolio from "./pages/Portfolio";
 import Services from "./pages/Services";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
+
 
 export default function App() {
   return (
