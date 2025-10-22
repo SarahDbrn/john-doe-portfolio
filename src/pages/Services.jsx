@@ -35,7 +35,7 @@ export default function Services() {
 
       {/* SERVICES */}
       <section className="container py-5">
-        <h1 className="text-center fw-bold mb-2">Mon offre de services</h1>
+        <h1 className="text-center fw-bold">Mon offre de services</h1>
         <p className="text-center text-muted mb-4">
           Voici les prestations sur lesquelles je peux intervenir
         </p>
