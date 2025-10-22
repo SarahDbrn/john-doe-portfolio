@@ -34,7 +34,7 @@ export default function Contact() {
     <section className="container py-5">
       {/* TITRE */}
       <div className="text-center mb-4">
-        <h1>Contact</h1>
+        <h1 className="text-center fw-bold mb-2">Contact</h1>
         <p className="text-muted">
           Pour me contacter en vue d’un entretien ou d’une future collaboration, merci de remplir le formulaire de contact.
         </p>
