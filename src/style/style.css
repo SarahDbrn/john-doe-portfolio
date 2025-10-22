@@ -10,7 +10,7 @@ body {
 }
 
 /* Hero */
-.hero { color:#fff; position:relative; }
+.hero { color:white; position:relative; }
 .hero::after { content:""; position:absolute; inset:0; background:rgba(0,0,0,0.25); }
 
 /* Card effets survol */
@@ -23,7 +23,8 @@ body {
   background-color: var(--card-hover-bg);
 }
 
-/* Boutons */
+/* Buttons */
+
 .btn-primary { transition: filter .18s ease, background-color .18s ease; }
 .btn-primary:hover { filter: brightness(.92); }
 
@@ -45,7 +46,7 @@ body {
 }
 
 .nav-link {
-  color: #fff; /* couleur des liens */
+  color: white; /* couleur des liens */
   margin-left: 15px;
 }
 

@@ -2,13 +2,17 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 export default function Header() {
-  const navClass = ({ isActive }) => isActive ? "nav-link active-link" : "nav-link";
+  const navClass = ({ isActive }) =>
+    isActive ? "nav-link active-link" : "nav-link";
 
   return (
     <header>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div className="container">
-          <NavLink to="/" className="navbar-brand">JOHN DOE</NavLink>
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-2">
+        <div className="container d-flex justify-content-between align-items-center">
+          {/* Nom à gauche */}
+          <div className="navbar-brand fw-bold brand-left">JOHN DOE</div>
+
+          {/* Menu burger mobile */}
           <button
             className="navbar-toggler"
             type="button"
@@ -21,22 +25,33 @@ export default function Header() {
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          <div className="collapse navbar-collapse" id="navMenu">
-            <ul className="navbar-nav ms-auto">
+          {/* Liens à droite */}
+          <div className="collapse navbar-collapse justify-content-end" id="navMenu">
+            <ul className="navbar-nav align-items-center">
               <li className="nav-item">
-                <NavLink to="/" end className={navClass}>ACCUEIL</NavLink>
+                <NavLink to="/" end className={navClass}>
+                  HOME
+                </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/services" className={navClass}>SERVICES</NavLink>
+                <NavLink to="/services" className={navClass}>
+                  SERVICES
+                </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/portfolio" className={navClass}>PORTFOLIO</NavLink>
+                <NavLink to="/portfolio" className={navClass}>
+                  PORTFOLIO
+                </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/contact" className={navClass}>CONTACT</NavLink>
+                <NavLink to="/contact" className={navClass}>
+                  CONTACT
+                </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/mentions" className={navClass}>MENTIONS LÉGALES</NavLink>
+                <NavLink to="/mentions" className={navClass}>
+                  MENTIONS LÉGALES
+                </NavLink>
               </li>
             </ul>
           </div>
