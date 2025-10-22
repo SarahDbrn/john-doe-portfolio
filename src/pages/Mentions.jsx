@@ -3,9 +3,20 @@ import React from "react";
 export default function MentionsLegales() {
   return (
     <section className="container py-5">
-      <h1 className="text-center mb-4">Mentions légales</h1>
+      <h1 className="text-center fw-bold mb-4">
+        Mentions légales
+      </h1>
+      <div
+        className="mx-auto mb-5"
+        style={{
+          width: "200px",
+          height: "4px",
+          backgroundColor: "#0d6efd", // bleu Bootstrap
+        }}
+      ></div>
 
       <div className="accordion" id="mentionsAccordion">
+        {/* --- Éditeur du site --- */}
         <div className="accordion-item">
           <h2 className="accordion-header" id="headingOne">
             <button
@@ -13,8 +24,10 @@ export default function MentionsLegales() {
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#editor"
+              aria-expanded="false"
+              aria-controls="editor"
             >
-              Editeur du site
+              Éditeur du site
             </button>
           </h2>
           <div
@@ -23,18 +36,25 @@ export default function MentionsLegales() {
             data-bs-parent="#mentionsAccordion"
           >
             <div className="accordion-body">
-              John Doe - détails...
+              John Doe<br />
+              40 rue Laure Diebold<br />
+              69009 Lyon, France<br />
+              10 20 30 40 50<br />
+              john.doe@gmail.com
             </div>
           </div>
         </div>
 
+        {/* --- Hébergeur --- */}
         <div className="accordion-item">
-          <h2 className="accordion-header">
+          <h2 className="accordion-header" id="headingTwo">
             <button
               className="accordion-button collapsed"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#host"
+              aria-expanded="false"
+              aria-controls="host"
             >
               Hébergeur
             </button>
@@ -45,22 +65,26 @@ export default function MentionsLegales() {
             data-bs-parent="#mentionsAccordion"
           >
             <div className="accordion-body">
-              alwaysdata
-              <br />
+              <h5 className="fw-bold mb-2">alwaysdata</h5>
               91 Rue du Faubourg Saint-Honoré, 75008 Paris
               <br />
-              <a href="https://www.alwaysdata.com">www.alwaysdata.com</a>
+              <a href="https://www.alwaysdata.com" target="_blank" rel="noreferrer">
+                www.alwaysdata.com
+              </a>
             </div>
           </div>
         </div>
 
+        {/* --- Crédits --- */}
         <div className="accordion-item">
-          <h2 className="accordion-header">
+          <h2 className="accordion-header" id="headingThree">
             <button
               className="accordion-button collapsed"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#credits"
+              aria-expanded="false"
+              aria-controls="credits"
             >
               Crédits
             </button>
@@ -79,4 +103,3 @@ export default function MentionsLegales() {
     </section>
   );
 }
-
