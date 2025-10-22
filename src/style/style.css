@@ -166,3 +166,19 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
+
+            /* Style page Mentions Légales */
+
+            /* Bordure bleue claire sur l'onglet sélectionné */
+.accordion-button:not(.collapsed) {
+  background-color: #e7f1ff; /* bleu très clair */
+  border: 4px solid #95bdfa9d; /* bordure bleue autour */
+  color: #000;
+  box-shadow: none;
+}
+
+/* Ajoute une légère transition pour plus de fluidité */
+.accordion-button {
+  transition: background-color 0.3s ease, border-left 0.3s ease;
+
+}
