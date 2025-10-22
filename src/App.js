@@ -6,8 +6,8 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Mentions from "./pages/Contact";
-import Portfolio from "./pages/portfolio";
-import Services from "./pages/services";
+import Portfolio from "./pages/Portfolio";
+import Services from "./pages/Services";
 
 export default function App() {
   return (
@@ -15,15 +15,16 @@ export default function App() {
       <header className="App-header">
           <nav>
             <link href="/">Accueil</link>
-            <link href="/portfolio">Portfolio</link>
-            <link href="/services">Services</link>
-            <link href="/contact">Contact</link>
+            <link href="/Portfolio">Portfolio</link>
+            <link href="/Services">Services</link>
+            <link href="/Contact">Contact</link>
+            <link href="/Mentions">Mentions Légales</link>
             <Routes>
               <Route path="/" element={<Accueil />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/portfolio" element={<Portfolio />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/mentions" element={<MentionsLegales />} />
+              <Route path="/Services" element={<Services />} />
+              <Route path="/Portfolio" element={<Portfolio />} />
+              <Route path="/Contact" element={<Contact />} />
+              <Route path="/Mentions" element={<Mentions />} />
         </Routes>
           </nav>
       </header>
