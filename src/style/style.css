@@ -1,3 +1,4 @@
+
 :root{
   --accent: #0d6efd; /* bootstrap primary */
   --card-hover-bg: #efefef;
@@ -8,20 +9,11 @@ body {
   font-family: 'Nunito Sans', sans-serif;
 }
 
-/* Header links uppercase */
-.navbar .nav-link {
-  text-transform: uppercase;
-  padding: .625rem .75rem;
-  transition: all .25s ease;
-}
-.navbar .nav-link:hover { text-decoration: underline; }
-.navbar .active-link { font-weight:600; text-decoration:underline; }
-
 /* Hero */
 .hero { color:#fff; position:relative; }
 .hero::after { content:""; position:absolute; inset:0; background:rgba(0,0,0,0.25); }
 
-/* Card hover effects */
+/* Card effets survol */
 .card {
   transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
 }
@@ -31,17 +23,9 @@ body {
   background-color: var(--card-hover-bg);
 }
 
-/* Buttons */
+/* Boutons */
 .btn-primary { transition: filter .18s ease, background-color .18s ease; }
 .btn-primary:hover { filter: brightness(.92); }
-
-/* Footer icons become white on hover */
-.footer-icon { font-size:1.4rem; opacity:0.8; transition: color .2s ease, opacity .2s ease; color: #bdbdbd; }
-.footer-icon:hover { color:#fff; opacity:1; }
-
-/* Footer links bold on hover */
-footer a { color: #d7d7d7; text-decoration:none; transition: font-weight .15s ease; }
-footer a:hover { font-weight:600; text-decoration: none; }
 
 /* Small responsive adjustments */
 .map-responsive iframe { width:100%; border:0; }
@@ -51,3 +35,128 @@ footer a:hover { font-weight:600; text-decoration: none; }
 
 /* transition for accordion header to show caret rotate (Bootstrap handles caret by default, but we can style) */
 .accordion-button { transition: background-color .15s ease; }
+
+            /* Style de la barre de navigation */
+
+/* ============================= */
+/* HEADER / NAVBAR STYLING */
+/* ============================= */
+
+.navbar {
+  background-color: #111; /* fond plus sombre */
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.navbar-brand.brand-left {
+  color: white;
+  font-weight: 600;
+  margin-right: auto; /* force le logo à gauche */
+}
+
+.navbar-brand.brand-left:hover {
+  color: var(--accent);
+}
+
+/* liens du menu */
+.nav-link {
+  color: white !important;
+  margin-left: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-link.active-link {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  color: white !important;
+}
+
+/* espace plus équilibré sur mobile */
+@media (max-width: 991px) {
+  .navbar-nav {
+    text-align: center;
+    padding-top: 0.5rem;
+  }
+  .nav-link {
+    margin: 6px 0;
+  }
+}
+
+            /* Style du footer */
+
+footer {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.95rem; /* base légèrement réduite */
+  line-height: 1.6;
+}
+
+/* TITRES */
+footer h6 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* TEXTE */
+footer p,
+footer ul li,
+.footer-link {
+  font-size: 0.9rem;
+  color: white;
+}
+
+/* LIENS */
+.footer-link {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* ICÔNES */
+.social-icons a i {
+  color: #888;
+  font-size: 2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover i {
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* LIGNE DE BAS DE PAGE */
+footer .text-muted {
+  font-size: 0.8rem;
+}
+
+            /* Style page de Services */
+
+/* Ligne bleue sous le titre */
+.underline {
+  width: 80px;
+  height: 3px;
+  background-color: #007bff;
+}
+
+/* Cartes de services */
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-body i {
+  color: #007bff;
+}
+
+/* Index */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
