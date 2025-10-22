@@ -1,3 +1,4 @@
+
 :root{
   --accent: #0d6efd; /* bootstrap primary */
   --card-hover-bg: #efefef;
@@ -12,7 +13,7 @@ body {
 .hero { color:#fff; position:relative; }
 .hero::after { content:""; position:absolute; inset:0; background:rgba(0,0,0,0.25); }
 
-/* Card hover effects */
+/* Card effets survol */
 .card {
   transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
 }
@@ -22,7 +23,7 @@ body {
   background-color: var(--card-hover-bg);
 }
 
-/* Buttons */
+/* Boutons */
 .btn-primary { transition: filter .18s ease, background-color .18s ease; }
 .btn-primary:hover { filter: brightness(.92); }
 
@@ -39,6 +40,8 @@ body {
 
 .navbar {
  background-color: #222; /* fond du menu */
+ font-size: 0.9rem;
+  letter-spacing: 0.5px;
 }
 
 .nav-link {
@@ -51,6 +54,40 @@ body {
   text-decoration: underline;
 }
 
+.navbar-brand.brand-left {
+  color: white;
+  font-weight: 600;
+  margin-right: auto; /* force le logo à gauche */
+}
+
+.navbar-brand.brand-left:hover {
+  color: var(--accent);
+}
+
+/* liens du menu */
+.nav-link {
+  color: white !important;
+  margin-left: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-link.active-link {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  color: white !important;
+}
+
+/* espace plus équilibré sur mobile */
+@media (max-width: 991px) {
+  .navbar-nav {
+    text-align: center;
+    padding-top: 0.5rem;
+  }
+  .nav-link {
+    margin: 6px 0;
+  }
+}
 
             /* Style du footer */
 
