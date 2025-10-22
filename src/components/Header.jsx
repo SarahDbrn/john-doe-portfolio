@@ -7,7 +7,7 @@ export default function Header(){
     <header>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container">
-          <NavLink to="/" className="navbar-brand">JOHN DOE</NavLink>
+          <NavLink to="/" className="navbar-brand brand-left">JOHN DOE</NavLink>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
             <span className="navbar-toggler-icon"></span>
           </button>
