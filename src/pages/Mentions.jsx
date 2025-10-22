@@ -23,7 +23,11 @@ export default function MentionsLegales() {
             data-bs-parent="#mentionsAccordion"
           >
             <div className="accordion-body">
-              John Doe - détails...
+              John Doe<br />
+              40 rue Laure Diebold<br />
+              69009 Lyon, France<br />
+              10 20 30 40 50<br />
+              john.doe@gmail.com
             </div>
           </div>
         </div>
